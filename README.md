@@ -10,3 +10,6 @@ A 27s, 797 frames mp4 video of Roger's full-body portrait, captured by Pixel 4aâ
 The camera poses were extracted using COLMAP.
 
 # Methodology
+First, we use the COLMAP algorithm to convert photos from different angles into data with spatial dimensions, where each data point is represented as xT = [x, y,z, 0,$].
+After feeding the data into an MLP (Multi-layer Perceptron), NeRF uses volume rendering techniques to obtain the color of each point from different angles.
+
