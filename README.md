@@ -12,4 +12,21 @@ The camera poses were extracted using COLMAP.
 # Methodology
 First, we use the COLMAP algorithm to convert photos from different angles into data with spatial dimensions, where each data point is represented as xT = [x, y,z, 0,$].
 After feeding the data into an MLP (Multi-layer Perceptron), NeRF uses volume rendering techniques to obtain the color of each point from different angles.
+First, we use the COLMAP algorithm to convert photos from different angles into data with spatial dimensions, where each data point is represented as xT = [x, y,z, 0,$].
+After feeding the data into an MLP (Multi-layer Perceptron), NeRF uses volume rendering techniques to obtain the color of each point from different angles.
 
+To obtain good results, photos need to be collected from different angles.
+
+# Results
+Video Demo https://youtu.be/WG_YBp7Z3s8
+
+# Discussion and Conclusion
+Input dataset video needs to reduce overlapping routes and increase multi-view input to minimize rendering blur 3D result.
+When targeting a specific object for 3D imaging, the object can be well-reproduced, but the surrounding environment becomes blurry in direct proportion to the distance from the object.
+
+# Future Work
+We hope to apply this technology in the future to generate various home decoration styles, allowing families to choose suitable interior designs more quickly and accurately.
+
+# References
+[1] Mildenhall, Ben, et al. "Nerf: Representing scenes as neural radiance fields for view synthesis." Communications of the ACM65.1 (2021): 99-106.
+[2] Haque, Ayaan, et al. "Instruct-nerf2nerf: Editing 3d scenes with instructions." arXiv preprint arXiv:2303.12789 (2023).
